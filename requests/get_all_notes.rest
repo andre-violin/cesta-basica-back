@@ -1,0 +1,15 @@
+GET http://localhost:3333/users/andre.violin@novaandradina.org
+
+###
+
+POST http://localhost:3333/users HTTP/1.1
+content-type: application/json
+
+{
+  "name": "André",
+  "email": "andre.violin7@novaandradina.org",
+  "password": "123456",
+  "token": "tyfvk2b13bk21b3kj2b13kb"
+}
+
+###
