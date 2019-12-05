@@ -18,13 +18,20 @@ const UserSchema = new Schema(
     },
     password: {
       type: String,
-      required: true,
-      select: false
+      required: true
+      // select: false
     },
     isAdmin: {
       type: Boolean,
       default: false
     },
+    pets: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Pet"
+      }
+    ],
+
     cars: [
       {
         type: Schema.Types.ObjectId,

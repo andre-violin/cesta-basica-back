@@ -1,8 +1,10 @@
 const Pet = require("../models/Pet");
+const User = require("../models/User");
 
 module.exports = {
   async store(req, res) {
     const pet = await Pet.create(req.body);
+    await User.updateOne({ _id: pet.user }, { $push: { pet: pet._id } });
 
     return res.json(pet);
   },
