@@ -14,7 +14,9 @@ module.exports = {
   },
 
   async index(req, res) {
-    const user = await User.findOne({ email: req.params.email });
+    const user = await User.findOne({ email: req.params.email }).populate(
+      "cars"
+    );
 
     if (user) {
       return res.json(user);

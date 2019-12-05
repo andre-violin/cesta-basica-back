@@ -18,12 +18,19 @@ const UserSchema = new Schema(
     },
     password: {
       type: String,
-      required: true
+      required: true,
+      select: false
     },
     isAdmin: {
       type: Boolean,
       default: false
-    }
+    },
+    cars: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Car"
+      }
+    ]
   },
   {
     timestamps: true
