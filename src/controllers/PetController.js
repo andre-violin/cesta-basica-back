@@ -14,5 +14,11 @@ module.exports = {
     const pet = await Pet.findOne({ _id: petId }).populate("user");
 
     return res.json(pet);
+  },
+
+  async list(req, res) {
+    const pet = await Pet.find();
+
+    return res.json(pet);
   }
 };

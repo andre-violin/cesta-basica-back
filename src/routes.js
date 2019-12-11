@@ -20,8 +20,10 @@ routes.get("/teste", (req, res) => res.json({ ok: true }));
 
 routes.post("/pet", PetController.store);
 routes.get("/pet/:id", PetController.index);
+routes.get("/pet/", PetController.list);
 
 routes.post("/car", CarController.store);
+routes.get("/car", CarController.list);
 routes.get("/car/:id", CarController.index);
 
 module.exports = routes;

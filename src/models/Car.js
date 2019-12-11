@@ -6,6 +6,10 @@ const CarSchema = new Schema(
       type: String,
       required: true
     },
+    pet: {
+      type: Schema.Types.ObjectId,
+      ref: "Pet"
+    },
     user: {
       type: Schema.Types.ObjectId,
       ref: "User"

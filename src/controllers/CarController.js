@@ -18,5 +18,10 @@ module.exports = {
     const car = await Car.findOne({ _id: req.params.id }).populate("user");
 
     return res.json(car);
+  },
+  async list(req, res) {
+    const car = await Car.find().populate("user");
+
+    return res.json(car);
   }
 };
