@@ -10,6 +10,8 @@ const authorizationMiddleware = require("./middlewares/authorization");
 
 const routes = Router();
 
+routes.get("/", UserController.list);
+
 routes.get("/users/:email", UserController.index);
 routes.post("/sessions", SessionController.store);
 

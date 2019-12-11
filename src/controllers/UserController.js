@@ -12,6 +12,11 @@ module.exports = {
 
     return res.json(user);
   },
+  async list(req, res) {
+    const users = await User.find({});
+
+    return res.json(users);
+  },
 
   async index(req, res) {
     const user = await User.findOne({ email: req.params.email }).populate([
