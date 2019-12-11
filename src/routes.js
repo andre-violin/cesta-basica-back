@@ -18,6 +18,7 @@ routes.get("/", (req, res) => {
     license: "MIT",
     gitAddres: "https://github.com/andre-violin/cesta-basica-back"
   };
+  return res.json(api);
 });
 
 routes.get("/users/:email", UserController.index);
