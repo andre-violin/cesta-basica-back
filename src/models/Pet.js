@@ -13,6 +13,10 @@ const PetSchema = new Schema(
     user: {
       type: Schema.Types.ObjectId,
       ref: "User"
+    },
+    car: {
+      type: Schema.Types.ObjectId,
+      ref: "Car"
     }
   },
   {
